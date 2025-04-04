@@ -9,3 +9,26 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.trafictop{
+    width: 150px;
+    height: 300px;
+    background-color: black;
+}
+.traficdown{
+    width: 800px;
+    height: 200px;
+    background-color: black;
+    border-radius: 20px;
+    justify-content: space-around;
+}
+.luzsemaforo{
+    height: 150px;
+    width: 150px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+}
+
+.resplandor{
+    box-shadow: 0px 0px 61px 9px rgba(240,226,240,1);
+}
