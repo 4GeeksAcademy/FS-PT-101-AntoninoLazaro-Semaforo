@@ -8,10 +8,10 @@ export const LuzSemaforo = () => {
     ];
 
     const [luces, setLuces] = useState(initialLights);
-    const [light, setLight] = useState();
+    const [resplandor, setResplandor] = useState("");
 
     const handleClick = (lightColor) => {
-        setLight(lightColor);
+        setResplandor(lightColor);
     };
 
     const handleClickAddLight = () => {
@@ -23,28 +23,29 @@ export const LuzSemaforo = () => {
     };
 
     const handleClickChangeShadow = () => {
-        const availableColor = luces.filter(el=>el.color!==light);
-        const shadow = availableColor[Math.floor(Math.random()*availableColor.length)].color;
-        setLight(shadow);
+        const colorDisponible = luces.filter(el => el.color !== resplandor);
+        const resplandorSeleccionado = colorDisponible[Math.floor(Math.random() * colorDisponible.length)].color;
+        setResplandor(resplandorSeleccionado);
     };
-    
 
     return (
-        <div className="text-center">
-            <div className="traficdown d-flex flex-row justify-content-center align-items-center">
+        <div className="row justify-content-center">
+            <div className="col-lg-3 traficdown d-flex flex-row justify-content-center align-items-center">
                 <div className="d-flex justify-content-center w-100 justify-content-around">
                     {luces.map((el) => (
                         <div
                             key={el.id}
                             onClick={() => handleClick(el.color)}
-                            className={`p-3 mx-4 luzsemaforo ${light === el.color ? 'resplandor' : ''}`}
+                            className={`p-3 mx-4 luzsemaforo ${resplandor === el.color ? 'resplandor' : ''}`}
                             style={{ backgroundColor: el.color }}
                         ></div>
                     ))}
                 </div>
             </div>
-            <button className="m-4" onClick={handleClickAddLight}>Agregar Luz Morada</button>
-            <button className="m-4" onClick={handleClickChangeShadow}>Cambiar resplandor</button>
+            <div className="d-flex flex-row justify-content-center align-items-center">
+                <button className="m-4" onClick={handleClickAddLight}>Agregar Luz Morada</button>
+                <button className="m-4" onClick={handleClickChangeShadow}>Cambiar resplandor</button>
+            </div>
         </div>
     );
 };
