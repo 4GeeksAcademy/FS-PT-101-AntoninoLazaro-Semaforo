@@ -30,7 +30,7 @@ export const LuzSemaforo = () => {
 
     return (
         <div className="row justify-content-center">
-            <div className="col-lg-3 traficdown d-flex flex-row justify-content-center align-items-center">
+            <div className="traficdown d-flex flex-row justify-content-center align-items-center">
                 <div className="d-flex justify-content-center w-100 justify-content-around">
                     {luces.map((el) => (
                         <div
@@ -43,8 +43,8 @@ export const LuzSemaforo = () => {
                 </div>
             </div>
             <div className="d-flex flex-row justify-content-center align-items-center">
-                <button className="m-4" onClick={handleClickAddLight}>Agregar Luz Morada</button>
-                <button className="m-4" onClick={handleClickChangeShadow}>Cambiar resplandor</button>
+                <button className="m-4 btn btn-secondary" onClick={handleClickAddLight}>Agregar Luz Morada</button>
+                <button className="m-4 btn btn-secondary" onClick={handleClickChangeShadow}>Cambiar resplandor</button>
             </div>
         </div>
     );

@@ -10,23 +10,23 @@
 
 */
 .trafictop{
-    width: 150px;
-    height: 300px;
+    width: 10vw;
+    height: 20vw;
     background-color: black;
 }
 .traficdown{
-    width: 800px;
-    height: 200px;
+    width: 80vw;
+    height: 15vw;
     background-color: black;
     border-radius: 20px;
     justify-content: space-around;
 }
 .luzsemaforo{
-    height: 150px;
-    width: 150px;
+    height:10vw ;
+    width: 10vw;
     background-color: #bbb;
     border-radius: 50%;
-    display: flex;
+    object-fit: contain;
 }
 
 .resplandor{

@@ -5,7 +5,7 @@ import { LuzSemaforo } from "./LuzSemaforo";
 const Home = () => {
 	return (
 		<div className="container d-flex flex-column align-items-center">
-			<div className="row trafictop">
+			<div className="row col-lg-3 col-md-6 col-lg-12 trafictop">
 			</div>
 			<LuzSemaforo/>
 		</div>
